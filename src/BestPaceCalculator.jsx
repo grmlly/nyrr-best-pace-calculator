@@ -72,7 +72,8 @@ export default function BestPaceCalculator() {
     // Also calculate what the best pace would be for other distances
     const otherDistances = {};
     Object.entries(distances).forEach(([distName, data]) => {
-      const timeNeeded = (bestPacePerMile * data.miles) / data.factor;
+      const equiv10KSeconds = bestPacePerMile * 6.214;
+      const timeNeeded = equiv10KSeconds / data.factor;
       const timeMinutes = Math.floor(timeNeeded / 60);
       const timeSecs = Math.round(timeNeeded % 60);
       const displayTime = timeMinutes > 60
