@@ -1,11 +1,42 @@
 # NYRR Best Pace Calculator
 
-Two interactive tools to calculate and plan your NYRR race pace for corral assignments.
+Interactive tools to calculate your NYRR best pace and plan race strategy.
 
-## Tools
+## How It Works
 
-1. **Race → Best Pace**: Convert any race time to your best pace
-2. **Best Pace → All Races**: See what times you need at every distance for a target best pace
+NYRR assigns corrals based on your "best pace," calculated from your most recent NYRR race (≥3 miles, within 2 years):
+
+**Best Pace = Equivalent 10K time ÷ 6.214 miles**
+
+Where: `Equivalent 10K time = Race time × Distance factor`
+
+Each distance has a conversion factor that accounts for how pace changes with distance:
+- 5K: ×2.09 (fastest relative to marathon pace)
+- Marathon: ×0.22 (slowest—heavily rewards endurance)
+- 10K: ×1.00 (baseline)
+
+## Two Tools
+
+### 1. Race → Best Pace
+Input any NYRR race result and see:
+- Your calculated best pace
+- What times you'd need at other distances to match this pace
+
+### 2. Best Pace → All Races
+Input a target best pace and see:
+- Times/paces needed at every NYRR distance to achieve that pace
+- Use this to plan which race to target
+
+## Key Insight
+
+**Longer distances are better for corral placement.** A strong marathon result converts to a faster best pace than a fast 5K—the 0.22 multiplier heavily rewards endurance.
+
+Example: To beat 8:00/mile best pace:
+- **5K**: Need sub-23:55 (brutal)
+- **Half-Marathon**: Need sub-1:51 (achievable)
+- **Marathon**: Need sub-3:45 (your natural pace zone)
+
+---
 
 ## Deploy to Vercel (Step-by-Step)
 
